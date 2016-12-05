@@ -1,4 +1,4 @@
-function bubbleSort(array) {
+(function bubbleSort(array) {
     var len = array.length;
     var tmp;
     var swapped=true;
@@ -16,5 +16,6 @@ function bubbleSort(array) {
             }
         }
     }
+    console.log('Bubble sort array : ' + array);
     return array;
-}
+}([2,6,3,9,12,33,76,12,12]));

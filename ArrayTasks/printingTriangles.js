@@ -1,4 +1,4 @@
-function printingTriangles(cubeLength) {
+(function printingTriangles(cubeLength) {
   const DELIMITER = '          ';
   var oneCube = [];
   var twoCube = [];
@@ -34,4 +34,4 @@ function printingTriangles(cubeLength) {
     console.log(strToConsole);
   }
   console.log('*/');
-}
+}(20));

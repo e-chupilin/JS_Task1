@@ -1,6 +1,9 @@
-function mergeSort(array)
+(function mergeSort(array)
 {
-    if(array.length == 1 ) return array;
+    if(array.length == 1 ) {
+      console.log(array);
+      return array;
+    }
 
     var mid = array.length / 2;
     var left = array.slice(0, mid);
@@ -8,9 +11,8 @@ function mergeSort(array)
 
     left = mergeSort(left);
     right = mergeSort(right);
-
     return merge(left, right);
-}
+} ([8,3,1,2,3,5,6,7,7]));
 
 function merge(left, right)
 {

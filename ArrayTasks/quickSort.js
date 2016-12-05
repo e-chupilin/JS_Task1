@@ -1,4 +1,6 @@
-function quickSort(array) {
+console.log('Quack sorted array : ' +
+
+(function quickSort(array) {
     if (array.length == 0) return [];
 
     var left = [], right = [], pivot = array[0];
@@ -9,5 +11,6 @@ function quickSort(array) {
         else
             right.push(array[i]);
     }
-    return quickSort(left).concat(pivot, quickSort(right));
-  }
+    var sortArr = quickSort(left).concat(pivot, quickSort(right));
+    return sortArr;
+  }([1,2,4,5,8,4])));

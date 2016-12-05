@@ -1,4 +1,4 @@
-function isStringContainEnd(stringFull, stringEnd) {
+(function isStringContainEnd(stringFull, stringEnd) {
   if(stringFull.length < stringEnd.length) return false;
 
   var isContain = true;
@@ -7,5 +7,6 @@ function isStringContainEnd(stringFull, stringEnd) {
     isContain = false;
       }
     }
+    console.log('Is string end by - ' + stringEnd + ' : ' + isContain);
   return isContain;
-}
+}('Kiko','ko'));

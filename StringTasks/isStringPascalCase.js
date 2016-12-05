@@ -1,4 +1,4 @@
-function isStringPascalCase(str) {
+(function isStringPascalCase(str) {
   isPascalCase = false;
   const DELIMITER = '_';
 
@@ -8,5 +8,6 @@ function isStringPascalCase(str) {
   if (str[0] == DELIMITER | str[str.length - 1] == DELIMITER ) {
     isPascalCase = false;
   }
+  console.log('Is pascal case : ' + isPascalCase);
   return isPascalCase;
-}
+}('Do_action'));
