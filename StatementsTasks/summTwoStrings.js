@@ -1,3 +1,4 @@
+// jshint esversion: 6
 (function summTwoStrings(strOne, strtwo) {
 
   var arrStr = [];
@@ -6,7 +7,7 @@
 
   var summ = 0;
 
-  for(i in arrStr) {
+  for(let i in arrStr) {
     summ += parseStrToInt(arrStr[i]);
     // console.log(parseStrToInt(arrStr[i]));
 }
@@ -18,15 +19,15 @@ function isHex(strToCheck) {
                   'a','b','c','d','e','f',
                   'A','B','C','D','E','F'];
 
-  for (var i = 0; i <= strToCheck.length -1; i++) {
+  for (let i = 0; i <= strToCheck.length -1; i++) {
       var isHexChar = false;
-      for(j in hexArr) {
-        if (strToCheck[i] == hexArr[j] ) {
+      for(let j in hexArr) {
+        if (strToCheck.charAt(i) == hexArr[j] ) {
           isHexChar = true;
           break;
         }
       }
-      if (isHexChar != true) return false;
+      if (isHexChar !== true) return false;
   }
   return true;
 }
@@ -38,8 +39,8 @@ function parseStrToInt(strToCheck) {
 
 function deleteChar(strToDel) {
     var noChar = '';
-    for(i in strToDel) {
-      if (!isNaN(parseInt(strToDel[i], 10))) noChar += strToDel[i];
+    for(let i in strToDel) {
+      if (!isNaN(parseInt(strToDel.charAt(i), 10))) noChar += strToDel.charAt(i);
     }
     return noChar;
 }
