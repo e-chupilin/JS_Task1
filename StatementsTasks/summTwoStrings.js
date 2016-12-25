@@ -33,8 +33,11 @@ function isHex(strToCheck) {
 }
 
 function parseStrToInt(strToCheck) {
-  if (isHex(strToCheck)) return parseInt(strToCheck, 16);
-  else return parseInt(deleteChar(strToCheck), 10);
+  var strHex = parseInt(strToCheck, 16);
+  var strInt = parseInt(deleteChar(strToCheck), 10);
+  if (isNaN(strHex) || isNaN(strInt)) return 0;
+  if (isHex(strToCheck)) return strHex;
+  else return strInt;
 }
 
 function deleteChar(strToDel) {
@@ -45,4 +48,4 @@ function deleteChar(strToDel) {
     return noChar;
 }
 
-}('123x1z13','a123'));
+}('123x1z13',''));
